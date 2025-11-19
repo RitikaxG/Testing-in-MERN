@@ -6,6 +6,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL : "postgres://localhost:5321" # dummy URL
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
