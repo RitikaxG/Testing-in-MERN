@@ -17,7 +17,12 @@ jobs:
 
       - name: Install Dependencies
         working-directory: 2-mocking-spying-express
-        run: npm install && npx prisma init 
+        run: npm install 
+
+      - name: Generate prisma client
+        working-directory: 2-mocking-spying-express
+        run: |
+          npx prisma generate
 
       - name: Run test
         working-directory: 2-mocking-spying-express 
